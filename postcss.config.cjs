@@ -1,4 +1,4 @@
 /** @type {import('postcss-load-config').Config} */
 module.exports = {
-  plugins: ['postcss-import', 'postcss-nested', 'autoprefixer'],
+  plugins: [require('postcss-import'), require('postcss-nested'), require('autoprefixer')],
 }
