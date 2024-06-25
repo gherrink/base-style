@@ -1,0 +1,29 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.defaultFormatter": null,
+  "eslint.format.enable": true,
+  "eslint.validate": ["javascript", "typescript"],
+  "search.exclude": {
+    "**/dist/": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[postcss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "postcss.validate": false,
+  "css.customData": [".vscode/postcss.json"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  }
+}
