@@ -9,6 +9,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        style: 'style.css',
         main: resolve(__dirname, 'pages/index.html'),
         ...(await glob(resolve(__dirname, 'pages/[a-z0-9-_][a-z0-9-_]*/index.html'))),
       },

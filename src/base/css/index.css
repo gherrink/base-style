@@ -1,0 +1,22 @@
+/**
+ * Text for the index page
+ *
+ * @page index UI-Doc
+ */
+
+/**
+ * Variables used in the project.
+ *
+ * @page variables Variables
+ * @order 10
+ */
+
+/**
+ * Resets used to normalize the browser styles.
+ *
+ * @page resets Resets
+ * @order 20
+ */
+@import url("01_resets/root.css");
+@import url("01_resets/initial.css");
+@import url("01_resets/typography.css");

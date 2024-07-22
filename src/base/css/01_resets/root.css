@@ -1,0 +1,92 @@
+:root {
+  /**
+   * The color variables are used to define the color palette of the application.
+   * The color palette is defined by the following variables:
+   * - **color-black**
+   * - **color-gray**
+   * - **color-white**
+   *
+   * The color variables are defined by the RGB values of the color.
+   *
+   * @location variables.colors Colors
+   */
+  --color-black: 0 0 0;
+  --color-gray: 128 128 128;
+  --color-white: 255 255 255;
+
+  /**
+   * Set of predefined font variables.
+   *
+   * @location variables.font Font
+   */
+
+  /**
+   * Font weights are a set of predefined values that can be used to define the weight of a font:
+   * - **font-weight-normal**
+   * - **font-weight-bold**
+   *
+   * @location variables.font.weight Font weight
+   */
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /**
+   * Font sizes are a set of predefined values that can be used to define the size of a font:
+   * - **font-size-xs**
+   * - **font-size-sm**
+   * - **font-size-normal**
+   * - **font-size-md**
+   * - **font-size-lg**
+   *
+   * @location variables.font.size Font size
+   */
+  --font-size-sm: 0.85em;
+  --font-size-normal: 1em;
+  --font-size-md: 1.2em;
+  --font-size-lg: 1.7em;
+
+  /**
+   * Space are a set of predefined values that can be used to define the space of an element.
+   * When spaces are used there is always a set of two variables you can use the `--space-unit` and `--space-<size>`.
+   * The `--space-unit` is the base unit that will be multiplied by the `--space-<size>`. Depending on the context
+   * you are using the space `<size>` changes.
+   * To help you there are some predefined spaces that you can use:
+   * - **xs**
+   * - **sm**
+   * - **normal**
+   * - **md**
+   * - **lg**
+   * - **xl**
+   *
+   * The predefined space can the be set in a specific context by defining the `--space-<size>` variable.
+   * For example the space unit is `1rem` and we are in the padding context, we can use `--space-pt: var(--space-md);` to change the padding
+   * top to the medium space.
+   *
+   * @location variables.spaces Spaces
+   */
+  --space-unit: 1rem;
+  --space-xs: 0.5;
+  --space-sm: 0.8;
+  --space-normal: 1;
+  --space-md: 1.2;
+  --space-lg: 1.6;
+  --space-xl: 2.4;
+
+  /* Definitions */
+  --font-space-unit: 1em;
+  --font-size-base: 16px;
+  --font-color: var(--color-black);
+  --font-family: system-ui, "Segoe UI", roboto, helvetica, arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-weight: var(--font-weight-normal);
+  --font-size: var(--font-size-normal);
+  --font-line-height: 1.4;
+  --headline-space: var(--space-normal);
+  --headline-weight: var(--font-weight-bold);
+  --bg-color: var(--color-white);
+  --accent-color: var(--color-gray);
+  --selection-color: var(--bg-color);
+  --selection-bg-color: var(--font-color);
+
+  color-scheme: light;
+}
