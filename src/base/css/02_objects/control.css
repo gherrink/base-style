@@ -1,0 +1,35 @@
+/**
+ * The `.control` class is used as base for all controls either by extending or using the class directly.
+ *
+ * @location objects.control Control
+ * @example
+ * <a class="control">Link control</a><br>
+ * <button type="button" class="control">Button control</button><br>
+ * <button type="button" class="control" disabled>Button control disabeled</button>
+ */
+.control {
+  --size-unit: 1em;
+  --space-px: 0;
+  --space-py: 0;
+
+  @extend .pxy;
+  @extend .font;
+
+  cursor: pointer;
+
+  display: inline-block;
+
+  text-align: center;
+  text-decoration: none;
+
+  appearance: none;
+  background: rgb(var(--control-bg-color, transparent));
+  border: none;
+  border-radius: unset;
+  outline: none;
+
+  &[aria-disabled="true"],
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
