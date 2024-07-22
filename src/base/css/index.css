@@ -20,3 +20,11 @@
 @import url("01_resets/root.css");
 @import url("01_resets/initial.css");
 @import url("01_resets/typography.css");
+
+/**
+ * Objects are building the basic structure of the styling.
+ *
+ * @page objects Objects
+ * @order 30
+ */
+@import url("02_objects/background.css");
