@@ -1,0 +1,36 @@
+/**
+ * Buttons extend the `.control` class and can be used with different html attributes.
+ *
+ * @page objects
+ * @location objects.button Buttons
+ * @example
+ * <button class="btn">Button</button>
+ * <button class="btn" disabled="disabled">Button disabled</button>
+ * <a href="#" class="btn">Link Button</a>
+ * <input type="submit" class="btn" value="Submit button" />
+ */
+.btn {
+  --space-py: var(--btn-space-py, var(--space-xs));
+  --space-px: var(--btn-space-px, var(--space-sm));
+  --font-size: var(--btn-font-size, var(--font-size-normal));
+  --font-weight: var(--btn-font-weight, var(--font-weight-bold));
+  --color: var(--btn-font-color, var(--font-color));
+
+  @extend .control;
+
+  background: rgb(var(--btn-bg-color, var(--bg-color)));
+  transition: all ease 0.25s;
+}
+
+/**
+ * We are using the bg colors to modify the btn color
+ *
+ * @page objects
+ * @section button.colors Colors
+ * @example
+ * <button class="btn bg-white">Button</button>
+ * <button class="btn bg-black">Button</button>
+ */
+.btn[class*="bg-"]:hover {
+  --btn-bg-color: var(--accent-color);
+}
