@@ -28,8 +28,11 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@highlightjs/cdn-assets": "^11.10.0",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
+    "@ui-doc/html-renderer": "^0.1.1",
+    "@ui-doc/vite": "^0.1.1",
     "autoprefixer": "^10.4.19",
     "cssnano": "^7.0.3",
     "eslint": "^8.57.0",
