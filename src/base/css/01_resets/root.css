@@ -1,88 +1,25 @@
+@import url("./root/color.css");
+@import url("./root/font.css");
+@import url("./root/space.css");
+@import url("./root/witdh.css");
+
+/**
+  * There are some global veriables that are used in the project. These variables are a base set and can be changed depending on context and requirements. All components are using these variables to define the style or as a fallback if there more specific named variable is not present.
+  *
+  * @location variables.global Globals
+  */
 :root {
   /**
-   * The color variables are used to define the color palette of the application.
-   * The color palette is defined by the following variables:
-   * - **color-black**
-   * - **color-gray**
-   * - **color-white**
-   *
-   * The color variables are defined by the RGB values of the color.
-   *
-   * @location variables.colors Colors
-   */
-  --color-black: 0 0 0;
-  --color-gray: 128 128 128;
-  --color-white: 255 255 255;
-
-  /**
-   * Set of predefined font variables.
-   *
-   * @location variables.font Font
-   */
-
-  /**
-   * Font weights are a set of predefined values that can be used to define the weight of a font:
-   * - **font-weight-normal**
-   * - **font-weight-bold**
-   *
-   * @location variables.font.weight Font weight
-   */
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-
-  /**
-   * Font sizes are a set of predefined values that can be used to define the size of a font:
-   * - **font-size-xs**
-   * - **font-size-sm**
-   * - **font-size-normal**
-   * - **font-size-md**
-   * - **font-size-lg**
-   *
-   * @location variables.font.size Font size
-   */
-  --font-size-sm: 0.85em;
-  --font-size-normal: 1em;
-  --font-size-md: 1.2em;
-  --font-size-lg: 1.7em;
-
-  /**
-   * Space are a set of predefined values that can be used to define the space of an element.
-   * When spaces are used there is always a set of two variables you can use the `--space-unit` and `--space-<size>`.
-   * The `--space-unit` is the base unit that will be multiplied by the `--space-<size>`. Depending on the context
-   * you are using the space `<size>` changes.
-   * To help you there are some predefined spaces that you can use:
-   * - **xs**
-   * - **sm**
-   * - **normal**
-   * - **md**
-   * - **lg**
-   * - **xl**
-   *
-   * The predefined space can the be set in a specific context by defining the `--space-<size>` variable.
-   * For example the space unit is `1rem` and we are in the padding context, we can use `--space-pt: var(--space-md);` to change the padding
-   * top to the medium space.
-   *
-   * @location variables.spaces Spaces
-   */
-  --space-unit: 1rem;
-  --space-xs: 0.5;
-  --space-sm: 0.8;
-  --space-normal: 1;
-  --space-md: 1.2;
-  --space-lg: 1.6;
-  --space-xl: 2.4;
-
-  /**
-   * Widths are a set of predefined values that can be used to limit the content width.
-   *
-   * @location variables.width Width (Content)
-   */
-  --width-min-space-x: 32px;
-  --width-content: 1024px;
-  --width-lg: 1280px;
-  --width-sm: 640px;
-
-  /* Definitions */
+    * - `--font-space-unit` - The spacing unit when using font related spaces (see the spaces documentation for mor details).
+    * - `--font-size-base` - The base font size.
+    * - `--font-color` - used font color.
+    * - `--font-family` - uded font family.
+    * - `--font-weight` - used font weight.
+    * - `--font-size` - used font size.
+    * - `--font-line-height` - used font line height.
+    *
+    * @location variables.global.font Font
+    */
   --font-space-unit: 1em;
   --font-size-base: 16px;
   --font-color: var(--color-black);
@@ -91,12 +28,28 @@
   --font-weight: var(--font-weight-normal);
   --font-size: var(--font-size-normal);
   --font-line-height: 1.4;
-  --headline-space: var(--space-normal);
-  --headline-weight: var(--font-weight-bold);
+
+  /**
+    * - `--bg-color` - used background color
+    * - `--accent-color` - used accent color
+    * - `--selection-color` - used selection color
+    * - `--selection-bg-color` - used selection background color
+    * - `--animation-time` - used animation time
+    *
+    * @location variables.global.colors Colors
+    */
   --bg-color: var(--color-white);
   --accent-color: var(--color-gray);
   --selection-color: var(--bg-color);
   --selection-bg-color: var(--font-color);
+
+  /**
+    *
+    * - `--animation-time` - used animation time
+    *
+    * @location variables.global.animation Animation
+    */
+  --animation-time: 0.25s;
 
   color-scheme: light;
 }
