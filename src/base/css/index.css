@@ -36,3 +36,10 @@
 @import url("02_objects/width.css");
 @import url("02_objects/image.css");
 @import url("02_objects/aspect-ratio.css");
+
+/**
+ * Objects are build out of objects and define style for it's inner children.
+ *
+ * @page components Components
+ * @order 40
+ */
