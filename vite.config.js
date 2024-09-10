@@ -34,6 +34,7 @@ export default defineConfig({
         },
       },
       source: ['src/*/css/**/*.css'],
+      staticAssets: './assets',
     }),
   ],
 })
