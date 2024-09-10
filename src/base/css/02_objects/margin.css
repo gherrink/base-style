@@ -16,7 +16,8 @@
  *   <div class="margin bg bg-white">text</div>
  * </div>
  */
-.margin {
+.margin,
+.mxy {
   margin: var(--mt, calc(var(--space-unit) * var(--space-mt, var(--space-normal))))
     var(--mr, calc(var(--space-unit) * var(--space-mr, var(--space-normal))))
     var(--mb, calc(var(--space-unit) * var(--space-mb, var(--space-normal))))
@@ -35,7 +36,8 @@
  *   <div class="mt bg bg-white">text</div>
  * </div>
  */
-.mt {
+.mt,
+.my {
   margin-top: var(--mt, calc(var(--space-unit) * var(--space-mt, var(--space-normal))));
 }
 
@@ -51,7 +53,8 @@
  *   <div class="mr bg bg-white">text</div>
  * </div>
  */
-.mr {
+.mr,
+.mx {
   margin-right: var(--mr, calc(var(--space-unit) * var(--space-mr, var(--space-normal))));
 }
 
@@ -67,7 +70,8 @@
  *   <div class="mb bg bg-white">text</div>
  * </div>
  */
-.mb {
+.mb,
+.my {
   margin-bottom: var(--mb, calc(var(--space-unit) * var(--space-mb, var(--space-normal))));
 }
 
@@ -83,7 +87,8 @@
  *   <div class="ml bg bg-white">text</div>
  * </div>
  */
-.ml {
+.ml,
+.mx {
   margin-left: var(--ml, calc(var(--space-unit) * var(--space-ml, var(--space-normal))));
 }
 
@@ -108,8 +113,6 @@
   --mb: var(--my, calc(var(--space-unit) * var(--space-my, var(--space-normal))));
   --ml: var(--mx, calc(var(--space-unit) * var(--space-mx, var(--space-normal))));
   --mr: var(--mx, calc(var(--space-unit) * var(--space-mx, var(--space-normal))));
-
-  @extend .margin;
 }
 
 /**
@@ -127,9 +130,6 @@
 .my {
   --mt: var(--my, calc(var(--space-unit) * var(--space-my, var(--space-normal))));
   --mb: var(--my, calc(var(--space-unit) * var(--space-my, var(--space-normal))));
-
-  @extend .mt;
-  @extend .mb;
 }
 
 /**
@@ -147,7 +147,4 @@
 .mx {
   --ml: var(--mx, calc(var(--space-unit) * var(--space-mx, var(--space-normal))));
   --mr: var(--mx, calc(var(--space-unit) * var(--space-mx, var(--space-normal))));
-
-  @extend .ml;
-  @extend .mr;
 }

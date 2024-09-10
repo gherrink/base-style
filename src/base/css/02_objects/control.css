@@ -14,11 +14,12 @@
   --space-px: 0;
   --space-py: 0;
 
-  @extend .pxy;
-
   cursor: pointer;
 
   display: inline-block;
+
+  padding: var(--py, calc(var(--space-unit) * var(--space-py)))
+    var(--px, calc(var(--space-unit) * var(--space-px)));
 
   text-align: center;
   text-decoration: none;
