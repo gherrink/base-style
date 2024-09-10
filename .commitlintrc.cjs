@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
-    'scope-enum': [2, 'always', ['base', 'pages', 'docs']],
+    'scope-enum': [2, 'always', ['base', 'image-copyright', 'pages', 'docs']],
   },
 }

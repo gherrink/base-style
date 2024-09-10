@@ -1,0 +1,34 @@
+/**
+  * By adding the `data-copyright` attribute you can define a copyright information for this image.
+  *
+  * @location objects.image.copy-right Copyright Info
+  * @example
+  * <picture class="image" data-copyright="your copyright info">
+  *   <img alt="Image Preview" src="img/preview-260x260.png" width="260" height="260"/>
+  * </picture>
+  */
+.image[data-copyright] {
+  --copyright-space-unit: 1em;
+  --copyright-space-px: var(--space-sm);
+  --copyright-space-py: var(--space-xs);
+  --copyright-font-size: var(--font-size-xs);
+  --copyright-font-color: var(--color-white);
+  --copyright-bg-color: var(--color-black);
+  --copyright-bg-color-alpha: 0.8;
+}
+
+.image[data-copyright]::after {
+  content: "© " attr(data-copyright);
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  padding: var(--copyright-py, calc(var(--copyright-space-unit) * var(--copyright-space-py)))
+    var(--copyright-px, calc(var(--copyright-space-unit) * var(--copyright-space-px)));
+
+  font-size: var(--copyright-font-size);
+  color: rgb(var(--copyright-font-color));
+
+  background: rgba(var(--copyright-bg-color) / var(--copyright-bg-color-alpha));
+}
