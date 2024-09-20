@@ -10,7 +10,7 @@
   * - **pb** - padding-bottom
   * - **pl** - padding-left
   *
-  * @location objects.padding Padding
+  * @location utils.padding Padding
   * @example
   * <div class="padding bg bg-black"><div class="bg bg-white">text</div></div>
   */
@@ -28,7 +28,7 @@
   * - **--pt** - set direclty a spacing unit
   * - **--space-pt** - set a predefined space
   *
-  * @location objects.padding.top Padding top
+  * @location utils.padding.top Padding top
   * @example
   * <div class="pt bg bg-black"><div class="bg bg-white">text</div></div>
   */
@@ -43,7 +43,7 @@
   * - **--pr** - set direclty a spacing unit
   * - **--space-pr** - set a predefined space
   *
-  * @location objects.padding.right Padding right
+  * @location utils.padding.right Padding right
   * @example
   * <div class="pr bg bg-black"><div class="bg bg-white">text</div></div>
   */
@@ -58,7 +58,7 @@
   * - **--pb** - set direclty a spacing unit
   * - **--space-pb** - set a predefined space
   *
-  * @location objects.padding.bottom Padding bottom
+  * @location utils.padding.bottom Padding bottom
   * @example
   * <div class="pb bg bg-black"><div class="bg bg-white">text</div></div>
   */
@@ -73,7 +73,7 @@
   * - **--pl** - set direclty a spacing unit
   * - **--space-pl** - set a predefined space
   *
-  * @location objects.padding.left Padding left
+  * @location utils.padding.left Padding left
   * @example
   * <div class="pl bg bg-black"><div class="bg bg-white">text</div></div>
   */
@@ -92,7 +92,7 @@
   * - **my** - padding-top and padding-bottom
   * - **mx** - padding-left and padding-right
 
-  * @location objects.padding.xy padding y-axis and x-axis
+  * @location utils.padding.xy padding y-axis and x-axis
   * @example
   * <div class="pxy bg bg-black"><div class="bg bg-white">text</div></div>
   */
@@ -109,7 +109,7 @@
   * - **--py** - set direclty a spacing unit
   * - **--space-py** - set a predefined space
   *
-  * @location objects.padding.y Padding y-axis
+  * @location utils.padding.y Padding y-axis
   * @example
   * <div class="py bg bg-black"><div class="bg bg-white">text</div></div>
   */
@@ -124,7 +124,7 @@
   * - **--px** - set direclty a spacing unit
   * - **--space-px** - set a predefined space
   *
-  * @location objects.padding.x Padding x-axis
+  * @location utils.padding.x Padding x-axis
   * @example
   * <div class="px bg bg-black"><div class="bg bg-white">text</div></div>
   */

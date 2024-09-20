@@ -1,13 +1,13 @@
 /**
   * Set text specific styles
   *
-  * @location objects.text Text
+  * @location utils.text Text
   */
 
 /**
   * Use the `.tc` class in combination with a color to set the text color.
   *
-  * @location objects.text.colors Colors
+  * @location utils.text.colors Colors
   * @example
   * <div class="tc tc-white">Text color white</div>
   * <div class="tc tc-black">Text color black</div>

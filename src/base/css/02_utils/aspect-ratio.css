@@ -2,7 +2,7 @@
   * The aspect ratio class can be used to force a specific aspect ratio on an element. The child will positioned absolute in the center of the parent.
   * The aspect ratio can be set by using the `--aspect-ratio` custom property. Can be done over css selector or directly in the style of the element.
   *
-  * @location objects.aspect-ratio Aspect ratio
+  * @location utils.aspect-ratio Aspect ratio
   * @example
   * <style>
   *   .aspect-ratio-16-9 { --aspect-ratio: 16 / 9; }
@@ -30,7 +30,7 @@
 /**
   * When using the aspect ratio in combination with an image, the image will be stretched to cover the whole area.
   *
-  * @location objects.aspect-ratio.with-picture With picture
+  * @location utils.aspect-ratio.with-picture With picture
   * @example
   * <picture class="image aspect-ratio" style="--aspect-ratio: 16/9; max-width: 360px;">
   *   <img alt="Image Preview" src="img/preview-520x520.png" width="520" height="520"/>
@@ -51,7 +51,7 @@
   * The aspect ratio class can be used to force a specific aspect ratio on an element. The child will positioned absolute in the center of the parent.
   * The aspect ratio can be set by using the `--aspect-ratio` custom property. Can be done over css selector or directly in the style of the element.
   *
-  * @location objects.aspect-ratio.16x9 16:9
+  * @location utils.aspect-ratio.16x9 16:9
   * @example
   * <div class="aspect-ratio-16-9 bg bg-black" style="max-width: 260px;"><span>16:9</span></div>
   *

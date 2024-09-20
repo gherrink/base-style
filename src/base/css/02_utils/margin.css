@@ -10,7 +10,7 @@
   * - **mb** - margin-bottom
   * - **ml** - margin-left
   *
-  * @location objects.margin Margin
+  * @location utils.margin Margin
   * @example
   * <div class="bg bg-black" style="display: flow-root;">
   *   <div class="margin bg bg-white">text</div>
@@ -30,7 +30,7 @@
   * - **--mt** - set direclty a spacing unit
   * - **--space-mt** - set a predefined space
   *
-  * @location objects.margin.top Margin top
+  * @location utils.margin.top Margin top
   * @example
   * <div class="bg bg-black" style="display: flow-root;">
   *   <div class="mt bg bg-white">text</div>
@@ -47,7 +47,7 @@
   * - **--mr** - set direclty a spacing unit
   * - **--space-mr** - set a predefined space
   *
-  * @location objects.margin.right Margin right
+  * @location utils.margin.right Margin right
   * @example
   * <div class="bg bg-black" style="display: flow-root;">
   *   <div class="mr bg bg-white">text</div>
@@ -64,7 +64,7 @@
   * - **--mb** - set direclty a spacing unit
   * - **--space-mb** - set a predefined space
   *
-  * @location objects.margin.bottom Margin bottom
+  * @location utils.margin.bottom Margin bottom
   * @example
   * <div class="bg bg-black" style="display: flow-root;">
   *   <div class="mb bg bg-white">text</div>
@@ -81,7 +81,7 @@
   * - **--ml** - set direclty a spacing unit
   * - **--space-ml** - set a predefined space
   *
-  * @location objects.margin.left Margin left
+  * @location utils.margin.left Margin left
   * @example
   * <div class="bg bg-black" style="display: flow-root;">
   *   <div class="ml bg bg-white">text</div>
@@ -102,7 +102,7 @@
   * - **my** - margin-top and margin-bottom
   * - **mx** - margin-left and margin-right
 
-  * @location objects.margin.xy Margin y-axis and x-axis
+  * @location utils.margin.xy Margin y-axis and x-axis
   * @example
   * <div class="bg bg-black" style="display: flow-root;">
   *   <div class="mxy bg bg-white">text</div>
@@ -121,7 +121,7 @@
   * - **--my** - set direclty a spacing unit
   * - **--space-my** - set a predefined space
   *
-  * @location objects.margin.y Margin y-axis
+  * @location utils.margin.y Margin y-axis
   * @example
   * <div class="bg bg-black" style="display: flow-root;">
   *   <div class="my bg bg-white">text</div>
@@ -138,7 +138,7 @@
   * - **--mx** - set direclty a spacing unit
   * - **--space-mx** - set a predefined space
   *
-  * @location objects.margin.x Margin x-axis
+  * @location utils.margin.x Margin x-axis
   * @example
   * <div class="bg bg-black" style="display: flow-root;">
   *   <div class="mx bg bg-white">text</div>

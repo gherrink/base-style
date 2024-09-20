@@ -2,7 +2,7 @@
   * Limit width of content. Use the `--width-content` variable to set the width and the `--width-min-space-x` to
   * set the minimum required space on the left and right side.
   *
-  * @location objects.width Width (Content)
+  * @location utils.width Width (Content)
   */
 [class^="width-"],
 [class*=" width-"] {
@@ -13,7 +13,7 @@
 }
 
 /**
-  * @location objects.width.content Width base/default
+  * @location utils.width.content Width base/default
   * @example
   * <div class="width-content">
   *   <div class="bg bg-black" style="min-height: 1em"></div>
@@ -23,7 +23,7 @@
 /* .width-content {} */
 
 /**
-  * @location objects.width.small Width small
+  * @location utils.width.small Width small
   * @example
   * <div class="width-sm">
   *   <div class="bg bg-black" style="min-height: 1em"></div>
@@ -34,7 +34,7 @@
 }
 
 /**
-  * @location objects.width.large Width large
+  * @location utils.width.large Width large
   * @example
   * <div class="width-lg">
   *   <div class="bg bg-black" style="min-height: 1em"></div>
@@ -45,7 +45,7 @@
 }
 
 /**
-  * @location objects.width.full Width full
+  * @location utils.width.full Width full
   * @example
   * <div class="width-full">
   *   <div class="bg bg-black" style="min-height: 1em"></div>

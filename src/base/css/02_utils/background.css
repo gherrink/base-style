@@ -3,7 +3,7 @@
   * variant css variables will be changed, so all colors used inside will fit to
   * the background.
   *
-  * @location objects.background Background
+  * @location utils.background Background
   */
 .bg {
   --selection-bg-color: var(--font-color);
@@ -14,8 +14,7 @@
 }
 
 /**
-  * @page objects
-  * @section background.colors Colors
+  * @location utils.background.colors Colors
   * @example
   * <div class="bg bg-black" style="min-height: 100px"></div>
   * <div class="bg bg-white" style="min-height: 100px"></div>

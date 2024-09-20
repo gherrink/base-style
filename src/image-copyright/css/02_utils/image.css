@@ -1,7 +1,7 @@
 /**
   * By adding the `data-copyright` attribute you can define a copyright information for this image.
   *
-  * @location objects.image.copy-right Copyright Info
+  * @location utils.image.copy-right Copyright Info
   * @example
   * <picture class="image" data-copyright="your copyright info">
   *   <img alt="Image Preview" src="img/preview-260x260.png" width="260" height="260"/>

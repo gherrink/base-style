@@ -1,7 +1,7 @@
 /**
   * The `.control` class is used as base for all controls either by extending or using the class directly.
   *
-  * @location objects.control Control
+  * @location utils.control Control
   * @example
   * <a class="control">Link control</a><br>
   * <button type="button" class="control">Button control</button><br>

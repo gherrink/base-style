@@ -1,8 +1,8 @@
 /**
   * Buttons extend the `.control` class and can be used with different html attributes.
   *
-  * @page objects
-  * @location objects.button Buttons
+  * @page utils
+  * @location utils.button Buttons
   * @example
   * <button class="btn">Button</button>
   * <button class="btn" disabled>Button disabled</button>
@@ -23,8 +23,7 @@
 /**
   * We are using the bg colors to modify the btn color. In combination with the accent color for hover effects.
   *
-  * @page objects
-  * @section button.colors Colors
+  * @location utils.button.colors Colors
   * @example
   * <button class="btn bg-white">Button</button>
   * <button class="btn bg-black">Button</button>
@@ -36,8 +35,7 @@
 /**
   * The hover effect when using bg colors is disabled when using disabled attributes. Or you can manually disable it with `.no-hover`.
   *
-  * @page objects
-  * @section button.colors.hover Hover effect
+  * @location utils.button.colors.hover Hover effect
   * @example
   * <button class="btn bg-black" aria-disabled="true">Disabled by aria</button>
   * <button class="btn bg-black" disabled>Disabled</button>
