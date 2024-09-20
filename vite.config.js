@@ -33,7 +33,7 @@ export default defineConfig(async ({ command }) => {
         output: {
           baseUri: command === 'serve' ? undefined : '.',
         },
-        source: ['src/*/css/**/*.css'],
+        source: ['src/*/css/**/*.css', 'src/*/js/services/**/*.ts', 'src/**/js/app.ts'],
         settings: {
           generate: {
             logo: () => 'Vite',
