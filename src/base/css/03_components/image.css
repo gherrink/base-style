@@ -5,7 +5,7 @@
   *
   * You can set the `loading="lazy"` attribute to lazy load the image.
   *
-  * @location utils.image Image
+  * @location components.image Image
   * @example
   * <picture class="image">
   *   <source media="(max-width: 260px)" srcset="img/preview-260x260.png">
