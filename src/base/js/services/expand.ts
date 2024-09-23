@@ -1,10 +1,11 @@
+import { animate } from '../utils/dom'
 import { queryParentSelector } from '../utils/select'
 
 /**
  * Sometimes you need to prevent the user from interacting with other elements while an element is expanded. Then you need the [inert](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inert) attribute.
  * You can set the `data-inerts` attribute with selectors (comma separated) to control the `inert` attribute of elements matching your selectors.
  * @location functions.expand.with-inerts Expand controlling inert
- * @order 20
+ * @order 30
  * @example
  * <style>
  * button::after {
@@ -76,19 +77,47 @@ function toggleInert(target: HTMLElement, show: boolean): void {
  * <button aria-expanded="true" aria-controls="target-hidden">Expanded:</button>
  * <div id="target-hidden">Controlled Target</div>
  */
-function toggleControlTarget(selector: string, show: boolean): void {
+
+/**
+ * You can add animations/transitions on the controlled element by adding the `data-animate` attribute with the animation name.
+ * The animation name will be used to add the necessary classes to the element to trigger the animation.
+ * Please refer to the animate function for more information, what classes will be added and when.
+ *
+ * @location functions.expand.with-animation Expand with animation
+ * @order 20
+ * @example
+ * <style>
+ *   .fade-enter-active,
+ *   .fade-leave-active {
+ *     transition: opacity 0.5s ease;
+ *   }
+ *
+ *   .fade-enter-from,
+ *   .fade-leave-to {
+ *     opacity: 0;
+ *   }
+ * </style>
+ * <button aria-expanded="true" aria-controls="target-hidden">Toggle Controlled Area</button>
+ * <div id="target-hidden" data-animate="fade">Controlled Target</div>
+ */
+function toggleControlTarget(selector: string, show: boolean, callback: () => void): void {
   const target = document.querySelector<HTMLElement>(selector)
 
   if (!target) {
     return
   }
 
-  if (target.hasAttribute('aria-hidden')) {
-    target.setAttribute('aria-hidden', show ? 'false' : 'true')
-  } else if (show) {
-    target.removeAttribute('hidden')
-  } else {
-    target.setAttribute('hidden', '')
+  const animationName = target.getAttribute('data-animate')
+  const toggleHide = () => {
+    if (target.hasAttribute('aria-hidden')) {
+      target.setAttribute('aria-hidden', show ? 'false' : 'true')
+    } else if (show) {
+      target.removeAttribute('hidden')
+    } else {
+      target.setAttribute('hidden', '')
+    }
+
+    callback()
   }
 
   if (show) {
@@ -108,6 +137,17 @@ function toggleControlTarget(selector: string, show: boolean): void {
   }
 
   toggleInert(target, show)
+
+  if (animationName) {
+    if (show) {
+      toggleHide()
+      animate(target, animationName, show)
+    } else {
+      animate(target, animationName, show, toggleHide)
+    }
+  } else {
+    toggleHide()
+  }
 }
 
 /**
@@ -131,6 +171,9 @@ export function initExpand(): void {
     const controlTarget = expander.getAttribute('aria-controls')
     const toggle = (e: MouseEvent) => {
       const expanded = expander.getAttribute('aria-expanded') === 'true'
+      const toggleExpanded = () => {
+        expander.setAttribute('aria-expanded', expanded ? 'false' : 'true') // when expanded we need to set false
+      }
 
       // if data-hide-same-level is set, we need to klick all other expanded elements to close them
       if (expander.parentElement && expander.hasAttribute('data-hide-same-level')) {
@@ -144,9 +187,10 @@ export function initExpand(): void {
       }
 
       if (controlTarget) {
-        toggleControlTarget(`#${controlTarget}`, !expanded)
+        toggleControlTarget(`#${controlTarget}`, !expanded, toggleExpanded)
+      } else {
+        toggleExpanded()
       }
-      expander.setAttribute('aria-expanded', expanded ? 'false' : 'true') // when expanded we need to set false
     }
 
     expander.addEventListener('click', toggle)
