@@ -9,9 +9,10 @@
 
 ::selection {
   color: rgb(var(--selection-color));
-  background-color: rgb(var(--selection-bg-color));
+  background: rgb(var(--selection-bg-color));
 }
 
 body {
-  background-color: rgb(var(--bg-color));
+  margin: 0;
+  background: rgb(var(--bg-color));
 }
