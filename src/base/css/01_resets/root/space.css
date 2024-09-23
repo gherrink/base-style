@@ -19,7 +19,7 @@
   * @space {4.8rem} --space-xxl | Extra extra large
   */
 :root {
-  --space-unit: 1rem;
+  --space-unit: 1em;
   --space-xxs: 0.35;
   --space-xs: 0.5;
   --space-sm: 0.7;

@@ -10,7 +10,6 @@
   */
 .control,
 .btn {
-  --size-unit: 1em;
   --space-px: 0;
   --space-py: 0;
 
