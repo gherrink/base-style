@@ -1,0 +1,146 @@
+.nav.main {
+  position: sticky;
+  top: 0;
+}
+
+.nav.main > .bar,
+.nav.main > .bar > .menu {
+  display: flex;
+  gap: var(--nav-main-item-gap, calc(var(--space-unit) * var(--nav-main-item-gap-space, 0)));
+}
+
+.nav.main > .bar {
+  --width-content-offset: var(--nav-main-bar-item-space-x) * var(--space-unit);
+
+  container-name: nav-bar;
+  container-type: inline-size;
+  justify-content: center;
+  background: rgb(var(--bg-color));
+
+  > .logo {
+    height: var(--nav-main-bar-item-height);
+
+    > svg {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .menu.menu-show-enter-active,
+  .menu.menu-show-leave-active {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .menu.menu-show-enter-from,
+  .menu.menu-show-leave-to {
+    opacity: 0;
+  }
+
+  > .logo,
+  > .burger.control {
+    --space-px: var(--nav-main-bar-item-space-x);
+    --space-py: var(--nav-main-bar-item-space-y);
+  }
+
+  > .menu > .control,
+  > .menu > .sub > .control {
+    --font-weight: var(--font-weight-bold);
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  .menu > .control,
+  > .menu > .sub > .control {
+    --space-px: var(--nav-main-bar-item-space-x);
+    --space-py: var(--nav-main-bar-item-space-y);
+
+    display: block;
+
+    &[aria-current="page"] {
+      --font-color: var(--accent-color);
+    }
+  }
+
+  > .menu > .sub > .menu > .control {
+    --space-py: var(--nav-main-sub-menu-item-space-y);
+  }
+
+  .menu[hidden],
+  .menu > .sub > .control[aria-expanded="false"] + .menu {
+    display: none;
+  }
+
+  @container nav-bar (width > 1000px) {
+    > .burger.control {
+      display: none;
+    }
+
+    > .menu {
+      margin-left: auto;
+    }
+
+    > .menu > .sub {
+      position: relative;
+
+      > .menu {
+        position: absolute;
+        top: var(--nav-main-height);
+        right: 0;
+
+        display: grid;
+        grid-template-columns: minmax(max-content, var(--nav-main-sub-menu-max-width));
+
+        background: rgb(var(--bg-color));
+
+        > .control {
+          max-width: var(--nav-main-sub-menu-max-width);
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  @container nav-bar (width <= 1000px) {
+    position: relative;
+
+    > .burger.control {
+      --nav-burger-control-size: var(--nav-main-bar-item-height);
+
+      margin-left: auto;
+    }
+
+    > .menu {
+      position: absolute;
+      top: calc(var(--nav-main-bar-item-height));
+      left: 0;
+
+      overflow-y: auto;
+      flex-direction: column;
+
+      width: 100%;
+      max-height: calc(100vh - var(--nav-main-height));
+      padding: calc(var(--space-unit) * var(--nav-main-menu-space-t)) var(--width-calc)
+        calc(var(--space-unit) * var(--nav-main-menu-space-b));
+
+      opacity: 1;
+      background: rgb(var(--bg-color));
+
+      .control {
+        text-align: left;
+      }
+    }
+
+    > .menu > .sub {
+      display: flex;
+      flex-direction: column;
+
+      > .menu {
+        padding-bottom: calc(var(--space-unit) * var(--nav-main-sub-menu-space-b));
+        padding-left: calc(var(--nav-main-bar-item-space-x) * var(--space-unit));
+      }
+    }
+
+    > .burger.control[aria-expanded="false"] ~ .menu {
+      display: none;
+    }
+  }
+}

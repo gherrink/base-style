@@ -1,0 +1,15 @@
+:root {
+  --nav-main-bar-item-space-x: var(--space-normal);
+  --nav-main-bar-item-space-y: var(--space-sm);
+  --nav-main-bar-item-height: calc(
+    (var(--font-size) * var(--font-line-height)) +
+      (var(--space-unit) * var(--nav-main-bar-item-space-y) * 2)
+  );
+  --nav-main-menu-space-t: var(--space-sm);
+  --nav-main-menu-space-b: var(--space-normal);
+  --nav-main-height: var(--nav-main-bar-item-height);
+  --nav-main-sub-menu-max-width: 30ch;
+  --nav-main-sub-menu-item-space-y: var(--space-xs);
+  --nav-main-sub-menu-space-b: var(--space-sm);
+  --scroll-padding-top: var(--nav-main-height);
+}
