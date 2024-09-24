@@ -22,6 +22,7 @@
 
   text-align: center;
   text-decoration: none;
+  word-break: keep-all;
 
   appearance: none;
   background: rgb(var(--control-bg-color, transparent));
