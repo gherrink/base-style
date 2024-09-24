@@ -67,9 +67,11 @@
       top: calc(var(--nav-main-bar-item-height));
       left: 0;
 
+      overflow-y: auto;
       flex-direction: column;
 
       width: 100%;
+      max-height: calc(100vh - var(--nav-main-height));
       padding: calc(var(--space-unit) * var(--nav-main-menu-space-t)) var(--width-calc)
         calc(var(--space-unit) * var(--nav-main-menu-space-b));
 
