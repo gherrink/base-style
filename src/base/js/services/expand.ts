@@ -3,7 +3,7 @@ import { queryParentSelector } from '../utils/select'
 
 /**
  * Sometimes you need to prevent the user from interacting with other elements while an element is expanded. Then you need the [inert](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inert) attribute.
- * You can set the `data-inerts` attribute with selectors (comma separated) to control the `inert` attribute of elements matching your selectors.
+ * You can set the `data-inert` attribute with selectors (comma separated) to control the `inert` attribute of elements matching your selectors.
  * @location functions.expand.with-inerts Expand controlling inert
  * @order 30
  * @example
@@ -13,17 +13,17 @@ import { queryParentSelector } from '../utils/select'
  * }
  * </style>
  * <button aria-expanded="false" aria-controls="target">Expanded:</button>
- * <div id="target" hidden data-inerts="[data-inert-controlled],#inert-controlled-2">Controlled Target</div>
+ * <div id="target" hidden data-inert="[data-inert-controlled],#inert-controlled-2">Controlled Target</div>
  * <div data-inert-controlled=""><button>Button 1.1</button><button>Button 1.2</button></div>
  * <div id="inert-controlled-2"><button>Button 2.1</button><button>Button 2.2</button></div>
  * @code
  * <button aria-expanded="false" aria-controls="target">Expanded:</button>
- * <div id="target" hidden data-inerts="[data-inert-controlled],#inert-controlled-2">Controlled Target</div>
+ * <div id="target" hidden data-inert="[data-inert-controlled],#inert-controlled-2">Controlled Target</div>
  * <div data-inert-controlled="1"><button>Button 1.1</button><button>Button 1.2</button></div>
  * <div id="inert-controlled-2"><button>Button 2.1</button><button>Button 2.2</button></div>
  */
 function toggleInert(target: HTMLElement, show: boolean): void {
-  const inertSelector = target.getAttribute('data-inerts')
+  const inertSelector = target.getAttribute('data-inert')
 
   if (!inertSelector) {
     return
@@ -34,7 +34,7 @@ function toggleInert(target: HTMLElement, show: boolean): void {
     const activeParentWithSameSelector = !show
       ? queryParentSelector(
           target.parentElement,
-          `[data-inerts="${selector}"],[data-inerts^="${selector},"],[data-inerts$=",${selector}"],[data-inerts*=",${selector},"]`,
+          `[data-inert="${selector}"],[data-inert^="${selector},"],[data-inert$=",${selector}"],[data-inert*=",${selector},"]`,
         )
       : null
 
