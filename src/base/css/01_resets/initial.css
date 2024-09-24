@@ -12,6 +12,11 @@
   background: rgb(var(--selection-bg-color));
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding-top, 0);
+}
+
 body {
   margin: 0;
   background: rgb(var(--bg-color));

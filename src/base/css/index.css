@@ -43,6 +43,7 @@
   */
 @import url("03_components/button.css");
 @import url("03_components/image.css");
+@import url("03_components/container.css");
 
 /**
   * Layouts are the outermost layer of the design. They define the structure of the page.
@@ -50,4 +51,4 @@
   * @page layout Layout
   * @order 50
   */
-@import url("04_layout/base.css");
+@import url("04_layout/body.css");
