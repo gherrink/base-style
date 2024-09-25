@@ -1,0 +1,82 @@
+/**
+  * @location components.accordion Accordion
+  * @example
+  * <div class="accordion">
+  *     <div class="item">
+  *         <div class="control" aria-expanded="false" aria-controls="item-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</div>
+  *         <div class="content" id="item-1" hidden data-animate="accordion-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+  *     </div>
+  *     <div class="item">
+  *         <div class="control" aria-expanded="true" aria-controls="item-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</div>
+  *         <div class="content" id="item-2" data-animate="accordion-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+  *     </div>
+  *     <div class="item">
+  *         <div class="control" aria-expanded="false" aria-controls="item-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</div>
+  *         <div class="content" id="item-3" hidden data-animate="accordion-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+  *     </div>
+  * </div>
+  */
+.accordion > .item {
+  overflow: hidden;
+}
+
+.accordion > .item > .control {
+  --selection-color: var(--accordion-control-bg-color, var(--bg-color));
+  --selection-bg-color: var(--accordion-control-color, var(--font-color));
+  --font-weight: var(--accordion-control-font-weight, var(--font-weight-bold));
+  --font-size: var(--accordion-control-font-size, var(--font-size-md));
+  --space-py: var(--accordion-control-space-py, var(--space-xs));
+  --space-px: var(--accordion-control-space-px, 0);
+
+  position: relative;
+
+  display: block;
+
+  padding-right: calc(var(--space-px) * var(--space-unit) + 3ch);
+
+  color: rgb(var(--accordion-control-color, var(--font-color)));
+  text-align: left;
+
+  background: rgb(var(--accordion-control-bg-color, var(--bg-color)));
+
+  &::after {
+    content: var(--accordion-control-icon, "\276F");
+
+    position: absolute;
+    right: calc(var(--space-px) * var(--space-unit) + 0.5ch);
+    transform-origin: center;
+    transform: rotate(90deg);
+
+    transition: transform var(--accordion-animation-time, 0.2s) ease-in-out;
+  }
+
+  &[aria-expanded="true"]::after {
+    transform: rotate(-90deg);
+  }
+}
+
+.accordion > .item > .content {
+  padding-top: var(
+    --accordion-content-pt,
+    calc(var(--accordion-content-space-pt) * var(--space-unit))
+  );
+  padding-bottom: var(
+    --accordion-content-pt,
+    calc(var(--accordion-content-space-pt, var(--space-sm)) * var(--space-unit))
+  );
+
+  &.accordion-content-enter-active,
+  &.accordion-content-leave-active {
+    transition:
+      padding-top var(--accordion-animation-time, 0.2s) ease-in-out,
+      padding-bottom var(--accordion-animation-time, 0.2s) ease-in-out,
+      opacity var(--accordion-animation-time, 0.2s) ease-in-out;
+  }
+
+  &.accordion-contnet-enter-from,
+  &.accordion-content-leave-to {
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+  }
+}
