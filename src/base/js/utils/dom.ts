@@ -55,8 +55,21 @@ export function animate(
   target.addEventListener('animationend', afterAnimation)
   target.addEventListener('transitionend', afterAnimation)
 
+  target.addEventListener('animationcancel', afterAnimation)
+  target.addEventListener('transitioncancel', afterAnimation)
+
   target.classList.add(animateClassActive, animateClassFrom)
   requestAnimationFrame(() => {
+    const styles = target.computedStyleMap()
+
+    // if the element has no transition or animation we can call the afterAnimation function in the next frame
+    if (
+      ['all', 'none'].includes(styles.get('transition')?.toString() ?? '') &&
+      styles.get('animation-name')?.toString() === 'none'
+    ) {
+      requestAnimationFrame(afterAnimation)
+    }
+
     target.classList.remove(animateClassFrom)
     target.classList.add(animateClassTo)
   })
