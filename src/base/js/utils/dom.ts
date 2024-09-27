@@ -60,13 +60,10 @@ export function animate(
 
   target.classList.add(animateClassActive, animateClassFrom)
   requestAnimationFrame(() => {
-    const styles = target.computedStyleMap()
+    const styles = window.getComputedStyle(target)
 
     // if the element has no transition or animation we can call the afterAnimation function in the next frame
-    if (
-      ['all', 'none'].includes(styles.get('transition')?.toString() ?? '') &&
-      styles.get('animation-name')?.toString() === 'none'
-    ) {
+    if (['all', 'none'].includes(styles.transition) && styles.animationName === 'none') {
       requestAnimationFrame(afterAnimation)
     }
 
