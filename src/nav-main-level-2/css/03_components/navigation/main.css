@@ -1,15 +1,15 @@
-.nav.main {
+.nav-main {
   position: sticky;
   top: 0;
 }
 
-.nav.main > .bar,
-.nav.main > .bar > .menu {
+.nav-main > .bar,
+.nav-main > .bar > .menu {
   display: flex;
   gap: var(--nav-main-item-gap, calc(var(--space-unit) * var(--nav-main-item-gap-space, 0)));
 }
 
-.nav.main > .bar {
+.nav-main > .bar {
   --width-content-offset: var(--nav-main-bar-item-space-x) * var(--space-unit);
 
   container-name: nav-bar;
