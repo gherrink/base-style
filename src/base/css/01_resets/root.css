@@ -42,6 +42,7 @@
   --accent-color: var(--color-gray);
   --selection-color: var(--bg-color);
   --selection-bg-color: var(--font-color);
+  --space-unit: 1em;
 
   /**
     *
